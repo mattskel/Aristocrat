@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F71A6AFC1E2873910031454A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6AFB1E2873910031454A /* main.cpp */; };
+		F71A6B041E2874AE0031454A /* Customer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B021E2874AE0031454A /* Customer.cpp */; };
+		F71A6B071E2878850031454A /* Product.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B051E2878850031454A /* Product.cpp */; };
+		F71A6B0A1E287EA80031454A /* Order.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B081E287EA80031454A /* Order.cpp */; };
+		F71A6B0D1E28A1650031454A /* Branch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B0B1E28A1650031454A /* Branch.cpp */; };
+		F71A6B101E28DEEF0031454A /* Kart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B0E1E28DEEF0031454A /* Kart.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		F71A6AF81E2873910031454A /* AristocratPractical */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AristocratPractical; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71A6AFB1E2873910031454A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F71A6B021E2874AE0031454A /* Customer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Customer.cpp; sourceTree = "<group>"; };
+		F71A6B031E2874AE0031454A /* Customer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Customer.hpp; sourceTree = "<group>"; };
+		F71A6B051E2878850031454A /* Product.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Product.cpp; sourceTree = "<group>"; };
+		F71A6B061E2878850031454A /* Product.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Product.hpp; sourceTree = "<group>"; };
+		F71A6B081E287EA80031454A /* Order.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Order.cpp; sourceTree = "<group>"; };
+		F71A6B091E287EA80031454A /* Order.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Order.hpp; sourceTree = "<group>"; };
+		F71A6B0B1E28A1650031454A /* Branch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Branch.cpp; sourceTree = "<group>"; };
+		F71A6B0C1E28A1650031454A /* Branch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Branch.hpp; sourceTree = "<group>"; };
+		F71A6B0E1E28DEEF0031454A /* Kart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Kart.cpp; sourceTree = "<group>"; };
+		F71A6B0F1E28DEEF0031454A /* Kart.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Kart.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				F71A6AFB1E2873910031454A /* main.cpp */,
+				F71A6B021E2874AE0031454A /* Customer.cpp */,
+				F71A6B031E2874AE0031454A /* Customer.hpp */,
+				F71A6B051E2878850031454A /* Product.cpp */,
+				F71A6B061E2878850031454A /* Product.hpp */,
+				F71A6B081E287EA80031454A /* Order.cpp */,
+				F71A6B091E287EA80031454A /* Order.hpp */,
+				F71A6B0B1E28A1650031454A /* Branch.cpp */,
+				F71A6B0C1E28A1650031454A /* Branch.hpp */,
+				F71A6B0E1E28DEEF0031454A /* Kart.cpp */,
+				F71A6B0F1E28DEEF0031454A /* Kart.hpp */,
 			);
 			path = AristocratPractical;
 			sourceTree = "<group>";
@@ -118,7 +143,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71A6B0D1E28A1650031454A /* Branch.cpp in Sources */,
 				F71A6AFC1E2873910031454A /* main.cpp in Sources */,
+				F71A6B071E2878850031454A /* Product.cpp in Sources */,
+				F71A6B101E28DEEF0031454A /* Kart.cpp in Sources */,
+				F71A6B0A1E287EA80031454A /* Order.cpp in Sources */,
+				F71A6B041E2874AE0031454A /* Customer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
