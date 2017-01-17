@@ -13,6 +13,10 @@
 		F71A6B0A1E287EA80031454A /* Order.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B081E287EA80031454A /* Order.cpp */; };
 		F71A6B0D1E28A1650031454A /* Branch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B0B1E28A1650031454A /* Branch.cpp */; };
 		F71A6B101E28DEEF0031454A /* Kart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B0E1E28DEEF0031454A /* Kart.cpp */; };
+		F71A6B131E2C4FF60031454A /* AustraliaBranch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B111E2C4FF60031454A /* AustraliaBranch.cpp */; };
+		F71A6B161E2C53CA0031454A /* NZBranch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B141E2C53CA0031454A /* NZBranch.cpp */; };
+		F71A6B191E2C6FA50031454A /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B171E2C6FA50031454A /* Item.cpp */; };
+		F71A6B1C1E2D7D400031454A /* System.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B1A1E2D7D400031454A /* System.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +44,14 @@
 		F71A6B0C1E28A1650031454A /* Branch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Branch.hpp; sourceTree = "<group>"; };
 		F71A6B0E1E28DEEF0031454A /* Kart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Kart.cpp; sourceTree = "<group>"; };
 		F71A6B0F1E28DEEF0031454A /* Kart.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Kart.hpp; sourceTree = "<group>"; };
+		F71A6B111E2C4FF60031454A /* AustraliaBranch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AustraliaBranch.cpp; sourceTree = "<group>"; };
+		F71A6B121E2C4FF60031454A /* AustraliaBranch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AustraliaBranch.hpp; sourceTree = "<group>"; };
+		F71A6B141E2C53CA0031454A /* NZBranch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NZBranch.cpp; sourceTree = "<group>"; };
+		F71A6B151E2C53CA0031454A /* NZBranch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NZBranch.hpp; sourceTree = "<group>"; };
+		F71A6B171E2C6FA50031454A /* Item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Item.cpp; sourceTree = "<group>"; };
+		F71A6B181E2C6FA50031454A /* Item.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Item.hpp; sourceTree = "<group>"; };
+		F71A6B1A1E2D7D400031454A /* System.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = System.cpp; sourceTree = "<group>"; };
+		F71A6B1B1E2D7D400031454A /* System.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = System.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,14 @@
 				F71A6B0C1E28A1650031454A /* Branch.hpp */,
 				F71A6B0E1E28DEEF0031454A /* Kart.cpp */,
 				F71A6B0F1E28DEEF0031454A /* Kart.hpp */,
+				F71A6B111E2C4FF60031454A /* AustraliaBranch.cpp */,
+				F71A6B121E2C4FF60031454A /* AustraliaBranch.hpp */,
+				F71A6B141E2C53CA0031454A /* NZBranch.cpp */,
+				F71A6B151E2C53CA0031454A /* NZBranch.hpp */,
+				F71A6B171E2C6FA50031454A /* Item.cpp */,
+				F71A6B181E2C6FA50031454A /* Item.hpp */,
+				F71A6B1A1E2D7D400031454A /* System.cpp */,
+				F71A6B1B1E2D7D400031454A /* System.hpp */,
 			);
 			path = AristocratPractical;
 			sourceTree = "<group>";
@@ -143,8 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71A6B1C1E2D7D400031454A /* System.cpp in Sources */,
+				F71A6B191E2C6FA50031454A /* Item.cpp in Sources */,
+				F71A6B131E2C4FF60031454A /* AustraliaBranch.cpp in Sources */,
 				F71A6B0D1E28A1650031454A /* Branch.cpp in Sources */,
 				F71A6AFC1E2873910031454A /* main.cpp in Sources */,
+				F71A6B161E2C53CA0031454A /* NZBranch.cpp in Sources */,
 				F71A6B071E2878850031454A /* Product.cpp in Sources */,
 				F71A6B101E28DEEF0031454A /* Kart.cpp in Sources */,
 				F71A6B0A1E287EA80031454A /* Order.cpp in Sources */,
