@@ -12,6 +12,7 @@
 
 Item::Item() {
     m_exchangeRate = 1.0f;
+    m_profitMargin = 0.0f;
 }
 
 Item::Item(float exchangeRate) {
@@ -19,25 +20,15 @@ Item::Item(float exchangeRate) {
     m_profitMargin = 0.0f;
 }
 
-Item::Item(Product* productReference, float exchangeRate) {
-    m_productReference = productReference;
+Item::Item(float exchangeRate, float profitMargin) {
     m_exchangeRate = exchangeRate;
-    m_profitMargin = 0.0f;
-    m_salePrice = m_productReference->GetCost() / m_exchangeRate;    // Initialise sale price to cost
+    m_profitMargin = profitMargin;
 }
 
 Item::~Item() {}
 
-void Item::SetProductReference(Product* productReference) {
-    m_productReference = productReference;
-}
+void Item::CalcSalePrice() {}
 
-void Item::CalcSalePrice() {
-    m_salePrice = m_productReference->GetCost() / (1.0f-m_profitMargin);
-}
+void Item::PrintDetails() {}
 
-void Item::PrintDetails() {
-//    std::cout<<"HELLO"<<std::endl;
-    std::cout<<m_productReference->GetDescription()<<std::endl;
-    std::cout<<ceilf(m_salePrice * 100) / 100<<std::endl;
-}
+void Item::PrintPrice() {}

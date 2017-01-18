@@ -22,6 +22,13 @@ Order::Order(std::vector<Item*> itemList) {
 
 Order::~Order() {}
 
+void Order::CalcOrderTotal() {
+    m_orderTotal = 0.0f;
+    for (Item* item : m_itemList) {
+        m_orderTotal += item->GetSalePrice();
+    }
+}
+
 void Order::PrintStatus() {
     switch (m_orderStatus) {
         case OrderStatus::ORDERED:
@@ -37,4 +44,20 @@ void Order::PrintStatus() {
         default:
         break;
     }
+}
+
+void Order::PrintOrder() {
+    std::cout<<"\n////////////////////////////\n// ORDER"<<std::endl;
+    for (Item* item : m_itemList) {
+        std::cout<<"////////////////////////////";
+        if (System* system = dynamic_cast<System*>(item)) {
+            system->PrintDetails();
+        }
+        else {
+            item->PrintDetails();
+        }
+        std::cout<<"//"<<std::endl;
+    }
+    std::cout<<"////////////////////////////\n// ORDER_TOTAL: $";
+    std::cout<<m_orderTotal<<std::endl;
 }

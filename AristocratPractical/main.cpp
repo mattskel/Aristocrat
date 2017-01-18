@@ -13,6 +13,7 @@
 #include "AustraliaBranch.hpp"
 #include "NZBranch.hpp"
 #include "System.hpp"
+#include "KartItem.hpp"
 
 #include <iostream>
 
@@ -24,67 +25,57 @@ int main(int argc, const char * argv[]) {
     
     PopulateProductList();
     
-    // Test SetProductCost for Branch class
+    // TEST COMPONENT
+    std::cout<<"\n////////////////////////////\n// TEST_COMPONENT"<<std::endl;
+    
+    Component* cableComponent = new Component(0.75f, 0.0f);
+    cableComponent->SetProductReference(productList[18]);
+    cableComponent->CalcSalePrice();
+    cableComponent->PrintDetails();
+    
+    // TEST AUS BRANCH
+    std::cout<<"\n////////////////////////////\n// TEST_AUS_BRANCH"<<std::endl;
+    
+    // Create new Aus Branch
     AustraliaBranch* ausBranch = new AustraliaBranch();
-    NZBranch* nzBranch = new NZBranch();
-    
     ausBranch->SetProductList(&productList);
-    nzBranch->SetProductList(&productList);
-    
-//    ausBranch->PrintProductList();
-    
     ausBranch->SetExchangRate(0.75f);
+    ausBranch->SetProfitMargin(0.0f);
+    ausBranch->GenerateItemList();
+    ausBranch->PrintItemList();
     
-    // TEST ITEM CLASS
-    Item* item = new Item(productList[0], 0.75);
-    item->PrintDetails();
-    
-    std::vector<Item*> itemList;
-    itemList.push_back(item);
-    
-    // TEST ORDER
-    Order* order = new Order(itemList);
-    if (order->GetStatus() == Order::OrderStatus::ORDERED) {
-        std::cout<<"ORDERED"<<std::endl;
-    }
+    // TEST KART ITEM
+    std::cout<<"\n////////////////////////////\n// TEST_KART_ITEM"<<std::endl;
+    Item* item = ausBranch->GetItemList()[0];
+    KartItem* kartItem = new KartItem(item, 5);
+    kartItem->PrintKartItem();
     
     // TEST KART
+    std::cout<<"\n////////////////////////////\n// TEST_KART"<<std::endl;
     Kart* kart = new Kart();
-    kart->AddItem(item);
-    kart->PrintItems();
+    kart->AddKartItem(item, 5);
+    kart->AddKartItem(ausBranch->GetItemList()[3], 2);
+    kart->PrintKartItems();
     
-    // SET CUSTOMER KART
-    // ADD ITEMS
-    std::cout<<"SET CUSTOMER KART"<<std::endl;
-    Customer* customer = new Customer();
-    customer->SetKart(new Kart);
-    std::cout<<"ADD ITEMS"<<std::endl;
-    customer->GetKart()->AddItem(item);
-    std::cout<<"PRINT ITEMS"<<std::endl;
-    customer->GetKart()->PrintItems();
+    // TEST CHECKOUT KART
+    std::cout<<"\n////////////////////////////\n// TEST_CHECKOUT_KART"<<std::endl;
+//    Kart* kart = new Kart();
+//    kart->AddItem(new Item(1, productList[18], 0.75f));
+//    kart->PrintItems();
+//    kart->AddItem(system);
+//    kart->PrintItems();
+//    customer->GetKart()->PrintItems();
     
-    // TEST SYSTEM
-    std::cout<<"\n////////////////////////////\n// TEST_SYSTEM"<<std::endl;
-    System* system = new System(0.75f, System::TheatreCategory::ENTRY);
-    system->AddProductReference(productList[0]);
-    system->AddProductReference(productList[2]);
-    system->AddProductReference(productList[4]);
-    system->AddProductReference(productList[17]);
-    system->PrintDetails();
+//    customer = new Customer();
+//    customer->SetKart(kart);
+//    ausBranch->Checkout(customer);
     
-    // TEST POLYMORPHISM OF ITEM
-    std::cout<<"\n////////////////////////////\n// TEST_POLYMORPHISM"<<std::endl;
-    itemList.clear();
-    itemList.push_back(system);
-    itemList.push_back(new Item(productList[18], 0.75f));
-    for (Item* item : itemList) {
-        if (System* system = dynamic_cast<System*>(item)) {
-            system->PrintDetails();
-        }
-        else {
-            item->PrintDetails();
-        }
-    }
+//    order = new Order(kart->GetItemList());
+//    order->CalcOrderTotal();
+//    order->PrintOrder();
+    
+    std::cout<<"\n////////////////////////////\n// END"<<std::endl;
+    std::cout<<"\n";
     
     return 0;
 }

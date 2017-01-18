@@ -16,7 +16,7 @@
 
 class Item {
 private:
-    Product* m_productReference;
+//    Product* m_productReference;
 protected:
     float m_profitMargin;
     float m_exchangeRate;
@@ -24,14 +24,16 @@ protected:
 public:
     Item();
     Item(float exchangeRate);
-    Item(Product* productReference, float exchangeRate);
+    Item(float exchangeRate, float profitMargin);
     virtual ~Item();
-    void SetProductReference(Product* productReference);
     void SetExchangeRate(float exchangeRate) {m_exchangeRate = exchangeRate;}
     void SetProfitMargin(float profitMargin) {m_profitMargin = profitMargin;}
-    void CalcSalePrice();
-    float GetSalePrice() {return m_salePrice * m_exchangeRate;}
-    void PrintDetails();
+    
+    float GetSalePrice() {return m_salePrice;}
+    float GetProfitMargin() {return m_profitMargin;}
+    virtual void CalcSalePrice() = 0;
+    virtual void PrintDetails();
+    virtual void PrintPrice();
 };
 
 #endif /* Item_hpp */

@@ -16,22 +16,35 @@ void Branch::Checkout(Customer *customer) {
     Kart* kart = customer->GetKart();
     
     // Remove the items and create an order
-//    std::vector<Product*> productList = kart->GetProductList();
+    std::vector<Item*> itemList = kart->GetItemList();
     
     // The branch should be responsible for handling the orders
     // Create the order
-//    Order* order = new Order(productList);
+    Order* order = new Order(itemList);
+    order->CalcOrderTotal();
     
     
     // Payment
-    // Calc the cost of the order
-    // Charge to the customer credit card
+    // ChargeCustomer()
     
     // The last thing we do is place the order on the list
 //    if (customer->MakePayment(order)) {
 //        m_orderList.push_back(order);
 //    }
     
+}
+
+Order* Branch::Checkout(Kart* kart) {
+    
+    // Remove the items from the Kart
+    std::vector<Item*> itemList = kart->GetItemList();
+    
+    // Create an order from the itemList
+    Order* order = new Order(itemList);
+    order->CalcOrderTotal();
+    
+    // Return the order
+    return order;
 }
 
 void Branch::PrintProductList() {

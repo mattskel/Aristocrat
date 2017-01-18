@@ -17,6 +17,8 @@
 		F71A6B161E2C53CA0031454A /* NZBranch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B141E2C53CA0031454A /* NZBranch.cpp */; };
 		F71A6B191E2C6FA50031454A /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B171E2C6FA50031454A /* Item.cpp */; };
 		F71A6B1C1E2D7D400031454A /* System.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B1A1E2D7D400031454A /* System.cpp */; };
+		F71A6B1F1E2ED44B0031454A /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B1D1E2ED44B0031454A /* Component.cpp */; };
+		F71A6B221E2F113C0031454A /* KartItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71A6B201E2F113C0031454A /* KartItem.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +54,10 @@
 		F71A6B181E2C6FA50031454A /* Item.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Item.hpp; sourceTree = "<group>"; };
 		F71A6B1A1E2D7D400031454A /* System.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = System.cpp; sourceTree = "<group>"; };
 		F71A6B1B1E2D7D400031454A /* System.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = System.hpp; sourceTree = "<group>"; };
+		F71A6B1D1E2ED44B0031454A /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		F71A6B1E1E2ED44B0031454A /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		F71A6B201E2F113C0031454A /* KartItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KartItem.cpp; sourceTree = "<group>"; };
+		F71A6B211E2F113C0031454A /* KartItem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KartItem.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,10 @@
 				F71A6B181E2C6FA50031454A /* Item.hpp */,
 				F71A6B1A1E2D7D400031454A /* System.cpp */,
 				F71A6B1B1E2D7D400031454A /* System.hpp */,
+				F71A6B1D1E2ED44B0031454A /* Component.cpp */,
+				F71A6B1E1E2ED44B0031454A /* Component.hpp */,
+				F71A6B201E2F113C0031454A /* KartItem.cpp */,
+				F71A6B211E2F113C0031454A /* KartItem.hpp */,
 			);
 			path = AristocratPractical;
 			sourceTree = "<group>";
@@ -165,6 +175,7 @@
 			files = (
 				F71A6B1C1E2D7D400031454A /* System.cpp in Sources */,
 				F71A6B191E2C6FA50031454A /* Item.cpp in Sources */,
+				F71A6B1F1E2ED44B0031454A /* Component.cpp in Sources */,
 				F71A6B131E2C4FF60031454A /* AustraliaBranch.cpp in Sources */,
 				F71A6B0D1E28A1650031454A /* Branch.cpp in Sources */,
 				F71A6AFC1E2873910031454A /* main.cpp in Sources */,
@@ -172,6 +183,7 @@
 				F71A6B071E2878850031454A /* Product.cpp in Sources */,
 				F71A6B101E28DEEF0031454A /* Kart.cpp in Sources */,
 				F71A6B0A1E287EA80031454A /* Order.cpp in Sources */,
+				F71A6B221E2F113C0031454A /* KartItem.cpp in Sources */,
 				F71A6B041E2874AE0031454A /* Customer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

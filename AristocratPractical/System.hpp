@@ -27,10 +27,13 @@ private:
 public:
     System();
     System(float exchangeRate, TheatreCategory category);
+    System(float exchangeRate, float profitMargin, TheatreCategory category);
     ~System();
-    void AddProductReference(Product* productReference);
+    void SetProductReferenceList(vector<Product*> productReferenceList);
+//    void AddProductReference(Product* productReference);
     void CalcSalePrice();
     void PrintDetails();
+    void PrintPrice();
     void PrintCategory();
 };
 

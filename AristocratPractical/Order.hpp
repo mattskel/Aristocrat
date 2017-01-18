@@ -11,6 +11,7 @@
 
 #include "Product.hpp"
 #include "Item.hpp"
+#include "System.hpp"
 
 #include <stdio.h>
 #include <vector>
@@ -26,6 +27,7 @@ public:
     };
 private:
     OrderStatus m_orderStatus;
+    float m_orderTotal;
     std::vector<Product*> m_productList;
     std::vector<Item*> m_itemList;
     float m_discount;
@@ -34,8 +36,12 @@ public:
     Order(std::vector<Product*> productList);
     Order(std::vector<Item*> itemList);
     ~Order();
+    void CalcOrderTotal();
     OrderStatus GetStatus() {return m_orderStatus;}
+    void SetStatus(OrderStatus status) {m_orderStatus = status;}
+    float GetOrderTotal() {return m_orderTotal;}
     void PrintStatus();
+    void PrintOrder();
 };
 
 #endif /* Order_hpp */

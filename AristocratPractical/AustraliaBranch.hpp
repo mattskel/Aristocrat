@@ -22,6 +22,8 @@ public:
     AustraliaBranch();
     ~AustraliaBranch();
     std::vector<Item*> GetItemList() {return m_itemList;}
+    void GenerateItemList();
+    void PrintItemList();
 };
 
 #endif /* AustraliaBranch_hpp */

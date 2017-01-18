@@ -11,6 +11,9 @@
 
 #include "Product.hpp"
 #include "Item.hpp"
+#include "System.hpp"
+#include "Component.hpp"
+#include "KartItem.hpp"
 
 #include <stdio.h>
 #include <vector>
@@ -20,6 +23,7 @@ class Kart {
 private:
 //    std::vector<Product*> m_productList;
     std::vector<Item*> m_itemList;
+    std::vector<KartItem*> m_kartItemList;
 public:
     Kart();
     ~Kart();
@@ -30,9 +34,14 @@ public:
 //    void PrintProducts();
     
     void AddItem(Item* item);
+    void AddKartItem(KartItem* kartItem);
+    void AddKartItem(Item* item, int quantity);
     void RemoveItem(Item* item);
+    void RemoveItem(int index);
+    void RemoveKartItem(int index);
     std::vector<Item*> GetItemList() {return m_itemList;}
     void PrintItems();
+    void PrintKartItems();
 };
 
 #endif /* Kart_hpp */
