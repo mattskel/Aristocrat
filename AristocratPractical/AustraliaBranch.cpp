@@ -11,6 +11,10 @@
 AustraliaBranch::AustraliaBranch() : Branch() {}
 AustraliaBranch::~AustraliaBranch() {}
 
+Item* AustraliaBranch::GetItem(int index) {
+    return m_itemList[index];
+}
+
 void AustraliaBranch::GenerateItemList() {
     
     System* entrySystem = new System(m_exchangeRate, m_profitMargin, System::TheatreCategory::ENTRY);
@@ -20,6 +24,7 @@ void AustraliaBranch::GenerateItemList() {
     entrySystemProductList.push_back((*m_productList)[4]);
     entrySystemProductList.push_back((*m_productList)[17]);
     entrySystem->SetProductReferenceList(entrySystemProductList);
+    entrySystem->CalcSalePrice();
     m_itemList.push_back(entrySystem);
     
     System* intermediateSystem = new System(m_exchangeRate, m_profitMargin, System::TheatreCategory::INTERMEDIATE);
@@ -29,6 +34,7 @@ void AustraliaBranch::GenerateItemList() {
     intermediateSystemProductList.push_back((*m_productList)[9]);
     intermediateSystemProductList.push_back((*m_productList)[17]);
     intermediateSystem->SetProductReferenceList(intermediateSystemProductList);
+    intermediateSystem->CalcSalePrice();
     m_itemList.push_back(intermediateSystem);
 
     System* cinematicSystem = new System(m_exchangeRate, m_profitMargin, System::TheatreCategory::CINEMATIC);
@@ -38,18 +44,22 @@ void AustraliaBranch::GenerateItemList() {
     cinematicSystemProductList.push_back((*m_productList)[15]);
     cinematicSystemProductList.push_back((*m_productList)[17]);
     cinematicSystem->SetProductReferenceList(cinematicSystemProductList);
+    cinematicSystem->CalcSalePrice();
     m_itemList.push_back(cinematicSystem);
     
     Component* cableComponent = new Component(m_exchangeRate, m_profitMargin);
     cableComponent->SetProductReference((*m_productList)[18]);
+    cableComponent->CalcSalePrice();
     m_itemList.push_back(cableComponent);
     
     Component* remoteComponent = new Component(m_exchangeRate, m_profitMargin);
     remoteComponent->SetProductReference((*m_productList)[19]);
+    remoteComponent->CalcSalePrice();
     m_itemList.push_back(remoteComponent);
     
     Component* headphonesComponent = new Component(m_exchangeRate, m_profitMargin);
     headphonesComponent->SetProductReference((*m_productList)[20]);
+    headphonesComponent->CalcSalePrice();
     m_itemList.push_back(headphonesComponent);
     
 }

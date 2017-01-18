@@ -23,12 +23,12 @@ void Component::PrintDetails() {
     std::cout<<"\n// ";
     std::cout<<m_productReference->GetDescription();
     CalcSalePrice();
-    std::cout<<"\n// PRICE: ";
+    std::cout<<"\n// PRICE: $";
     std::cout<<ceilf(m_salePrice * 100) / 100<<std::endl;
 }
 
 void Component::PrintPrice() {
     CalcSalePrice();
-    std::cout<<"\n// PRICE: ";
+    std::cout<<"\n// PRICE: $";
     std::cout<<ceilf(m_salePrice * 100) / 100<<std::endl;
 }

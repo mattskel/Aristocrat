@@ -11,14 +11,19 @@
 
 #include "Branch.hpp"
 #include "Product.hpp"
+#include "Item.hpp"
 
 #include <stdio.h>
 
 class NZBranch : public Branch {
 private:
+    Item* m_itemList[6];
 public:
     NZBranch();
     ~NZBranch();
+    Item* GetItem(int index);
+    void GenerateItemList();
+    void PrintItemList();
 };
 
 #endif /* NZBranch_hpp */

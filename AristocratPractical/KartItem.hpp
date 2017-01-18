@@ -17,6 +17,7 @@ class KartItem {
 private:
     int m_quantity;
     Item* m_item;
+    float m_itemTotal;
 public:
     KartItem();
     KartItem(Item* item);
@@ -24,6 +25,7 @@ public:
     ~KartItem();
     int GetQuantity() {return m_quantity;}
     Item* GetItem() {return m_item;}
+    float GetItemTotal() {return m_itemTotal;}
     void SetQuantity(int quantity) {m_quantity = quantity;}
     void SetItem(Item* item) {m_item = item;}
     void PrintKartItem();

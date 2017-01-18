@@ -37,11 +37,20 @@ void Branch::Checkout(Customer *customer) {
 Order* Branch::Checkout(Kart* kart) {
     
     // Remove the items from the Kart
-    std::vector<Item*> itemList = kart->GetItemList();
+//    std::vector<Item*> itemList = kart->GetItemList();
+    std::vector<KartItem*> kartItemList = kart->GetKartItemList();
     
     // Create an order from the itemList
-    Order* order = new Order(itemList);
+    Order* order = new Order(kart->GetKartItemList());
+    order->CalcSubTotal();
+    order->CalcDiscount();
     order->CalcOrderTotal();
+    
+    // Set the Branch instance
+    order->SetBranch(this);
+    
+    // Place order on list
+    m_orderList.push_back(order);
     
     // Return the order
     return order;
@@ -57,3 +66,19 @@ void Branch::PrintProductList() {
 //void Branch::SetProductCost(int productIndex, float cost) {
 //    m_productList[productIndex]->SetCost(cost);
 //}
+
+void Branch::PrepareOrders() {
+    for (Order* order : m_orderList) {
+        if (order->GetStatus() == Order::OrderStatus::ORDERED) {
+            order->SetStatus(Order::OrderStatus::READY_FOR_DELIVERY);
+        }
+    }
+}
+
+void Branch::DeliverOrders() {
+    for (Order* order : m_orderList) {
+        if (order->GetStatus() == Order::OrderStatus::READY_FOR_DELIVERY) {
+            order->SetStatus(Order::OrderStatus::DELIVERED);
+        }
+    }
+}

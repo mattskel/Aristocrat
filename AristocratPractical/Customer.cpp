@@ -26,6 +26,9 @@ bool Customer::MakePayment(Order* order) {
     // Set the status of the order to ORDERED
     order->SetStatus(Order::OrderStatus::ORDERED);
     
+    // Set the customer on the Order instance
+    order->SetCustomer(this);
+    
     m_orderList.push_back(order); // So the customer has a copy
     
     return true;
@@ -33,14 +36,6 @@ bool Customer::MakePayment(Order* order) {
 
 void Customer::CheckOrderStatus() {
     for (Order* order : m_orderList) {
-        Order::OrderStatus orderStat = order->GetStatus();
-        switch (orderStat) {
-            case Order::OrderStatus::ORDERED:
-            std::cout<<"ORDERED"<<std::endl;
-            break;
-            
-            default:
-            break;
-        }
+        order->PrintStatus();
     }
 }

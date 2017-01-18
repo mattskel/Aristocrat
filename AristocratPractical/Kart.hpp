@@ -40,6 +40,7 @@ public:
     void RemoveItem(int index);
     void RemoveKartItem(int index);
     std::vector<Item*> GetItemList() {return m_itemList;}
+    std::vector<KartItem*> GetKartItemList() {return m_kartItemList;}
     void PrintItems();
     void PrintKartItems();
 };

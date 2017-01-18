@@ -35,6 +35,8 @@ public:
     void SetProfitMargin(float profitMargin) {m_profitMargin = profitMargin;}
     virtual void GenerateItemList() = 0;
     void PrintItemList();
+    void PrepareOrders();
+    void DeliverOrders();
 };
 
 #endif /* Branch_hpp */
